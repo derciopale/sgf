@@ -27,6 +27,12 @@ require __DIR__.'/auth.php';
 // Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-use App\Http\Controllers\ProductController;
+
 
 Route::resource('produtos', ProdutoController::class);
+
+
+Route::get('/produtos', [ProdutoController::class, 'index']);
+Route::get('/cadastrarProduto', [ProdutoController::class, 'create']);
+// Route::get('/produtos', [ProdutoController::class, 'store']);
+Route::get('/editarProduto', [ProdutoController::class, 'edit']);

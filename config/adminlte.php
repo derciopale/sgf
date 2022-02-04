@@ -252,12 +252,12 @@ return [
             'submenu' => [
                 [
                     'text' => 'Cadastrar',
-                    'url'  => '#',
+                    'url'  => '/produtos/create',
                 ],
 
                 [
                     'text' => 'Listar',
-                    'url'  => '#',
+                    'url'  => '/produtos',
                 ],
             ],
         ],

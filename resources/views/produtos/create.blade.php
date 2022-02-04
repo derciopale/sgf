@@ -1,14 +1,15 @@
-@extends('products.layout')
+@extends('produtos.layout')
 
 @section('content')
 <div class="row">
     <div class="col-lg-12 margin-tb">
-        <div class="pull-left">
-            <h2>Adicionar Novo Produto</h2>
-        </div>
-        <div class="pull-right">
-            <a class="btn btn-primary" href="{{ route('produtos.index') }}"> Voltar</a>
-        </div>
+
+        {{-- <div class="pull-left">
+            <a class="btn btn-primary" href="{{ route('produtos.create') }}"> Adicionar Novo Produto</a>
+        </div> --}}
+
+        <h2 class="text-center">Cadastro de Produtos</h2> <br>
+
     </div>
 </div>
 
@@ -26,62 +27,66 @@
 <form action="{{ route('produtos.store') }}" method="POST">
     @csrf
 
-     <div class="row">
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Nome:</strong>
+
+    <div class="container">
+        <div class="panel panel-default">
+
+     <div class="row g-3">
+
+        <div class="col-md-6">
+                <label for="nome" class="form-label">Nome</label>
                 <input type="text" name="nome" class="form-control" placeholder="Nome">
-            </div>
+
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Categoria:</strong>
+
+        <div class="col-md-6">
+               <label for="nome" class="form-label">Categoria</label>
                 <input type="text" name="categoria" class="form-control" placeholder="Categoria">
-            </div>
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Preco:</strong>
-                <input type="text" name="preco" class="form-control" placeholder="Preco">
-            </div>
+
+
+        <div class="col-md-6">
+            <label for="nome" class="form-label">Preco</label>
+                <input type="number" name="preco" class="form-control" placeholder="Preco">
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Quantidade:</strong>
+        <div class="col-md-6">
+            <label for="nome" class="form-label">Quantidade</label>
                 <input type="number" name="quantidade" class="form-control" placeholder="Quantidade">
-            </div>
+
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Data de Fabrico:</strong>
+        <div class="col-12">
+            <label for="nome" class="form-label">Descricao</label>
+                <textarea class="form-control" style="height:150px" name="descricao" placeholder="Descricao"></textarea>
+
+        </div>
+
+        <div class="col-md-6">
+            <label for="nome" class="form-label">Data de Fabrico</label>
                 <input type="Date" name="dataFabrico" class="form-control" placeholder="Data de Fabrico">
-            </div>
         </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Descricao:</strong>
-                <textarea class="form-control" style="height:150px" name="detail" placeholder="Detail"></textarea>
-            </div>
-        </div>
 
-        <div class="col-xs-12 col-sm-12 col-md-12">
-            <div class="form-group">
-                <strong>Data de Expiracao:</strong>
+
+        <div class="col-md-6">
+            <label for="nome" class="form-label">Data de Expiracao</label>
                 <input type="Date" name="dataExpiracao" class="form-control" placeholder="Data de Expiracao">
-            </div>
         </div>
 
 
 
-        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="submit" class="btn btn-primary me-md-2">Cadastrar</button>
+                <button type="submit" class="btn btn-secondary">Cancelar</button>
         </div>
     </div>
+
+    </div>
+</div>
+
 
 </form>
 @endsection

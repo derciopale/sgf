@@ -1,4 +1,4 @@
-@extends('products.layout')
+@extends('produtos.layout')
 
 @section('content')
     <div class="row">
@@ -6,7 +6,7 @@
             <div class="pull-left">
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('produto.create') }}"> Novo Produto</a>
+                <a class="btn btn-success" href="{{ route('produtos.create') }}"> Novo Produto</a>
             </div>
         </div>
     </div>
