@@ -19,6 +19,10 @@ class Produto extends Model
         'dataExpiracao'
     ];
 
-    
+    public function categoria()
+    {
+        return $this->hasOne(Categoria::class);
+    }
+
 
 }

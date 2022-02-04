@@ -1,21 +1,11 @@
 @extends('produtos.layout')
 
 @section('content')
-<div class="row">
-    <div class="col-lg-12 margin-tb">
 
-        {{-- <div class="pull-left">
-            <a class="btn btn-primary" href="{{ route('produtos.create') }}"> Adicionar Novo Produto</a>
-        </div> --}}
-
-        <h2 class="text-center">Cadastro de Produtos</h2> <br>
-
-    </div>
-</div>
 
 @if ($errors->any())
     <div class="alert alert-danger">
-        <strong>Whoops!</strong> Verifique todos os campos<br><br>
+        <strong>Erro!</strong> Verifique todos os campos<br><br>
         <ul>
             @foreach ($errors->all() as $error)
                 <li>{{ $error }}</li>
@@ -34,8 +24,8 @@
      <div class="row g-3">
 
         <div class="col-md-6">
-                <label for="nome" class="form-label">Nome</label>
-                <input type="text" name="nome" class="form-control" placeholder="Nome">
+                <label for="nome" class="form-label">Nome do Produto</label>
+                <input type="text" name="nome" class="form-control" placeholder="Nome do Produto">
 
         </div>
 
@@ -48,8 +38,8 @@
 
 
         <div class="col-md-6">
-            <label for="nome" class="form-label">Preco</label>
-                <input type="number" name="preco" class="form-control" placeholder="Preco">
+            <label for="nome" class="form-label">Preço</label>
+                <input type="number" name="preco" class="form-control" placeholder="Preço">
         </div>
 
         <div class="col-md-6">
@@ -59,8 +49,8 @@
         </div>
 
         <div class="col-12">
-            <label for="nome" class="form-label">Descricao</label>
-                <textarea class="form-control" style="height:150px" name="descricao" placeholder="Descricao"></textarea>
+            <label for="nome" class="form-label">Descrição</label>
+                <textarea class="form-control" style="height:150px" name="descricao" placeholder="Descrição"></textarea>
 
         </div>
 
@@ -72,8 +62,8 @@
 
 
         <div class="col-md-6">
-            <label for="nome" class="form-label">Data de Expiracao</label>
-                <input type="Date" name="dataExpiracao" class="form-control" placeholder="Data de Expiracao">
+            <label for="nome" class="form-label">Data de Expiração</label>
+                <input type="Date" name="dataExpiracao" class="form-control" placeholder="Data de Expiração">
         </div>
 
 

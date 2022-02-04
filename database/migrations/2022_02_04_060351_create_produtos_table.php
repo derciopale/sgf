@@ -22,6 +22,7 @@ class CreateProdutosTable extends Migration
             $table->longText('descricao');
             $table->date('dataFabrico');
             $table->date('dataExpiracao');
+            $table->foreignId('user_id')->constrained('users');
             $table->timestamps();
 
 
