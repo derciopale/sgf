@@ -17,15 +17,15 @@ class CreateProdutosTable extends Migration
             $table->id();
             $table->string('nome');
             $table->string('categoria');
-            $table->string('preco');
-            $table->string('quantidade');
-            $table->string('descricao');
-            $table->string('dataFabrico');
-            $table->string('dataPrazo');
+            $table->double('preco',8, 2);
+            $table->double('quantidade');
+            $table->longText('descricao');
+            $table->date('dataFabrico');
+            $table->date('dataExpiracao');
             $table->timestamps();
 
 
-            
+
         });
     }
 
